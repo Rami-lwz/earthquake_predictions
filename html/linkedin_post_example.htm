@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LinkedIn Post Example</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f5f5f5;
+		}
+		.post-container {
+			display: flex;
+			flex-direction: column;
+			background-color: #ffffff;
+			border: 1px solid #d3d3d3;
+			margin: 20px auto;
+			padding: 20px;
+			max-width: 800px;
+		}
+		.logo-container {
+			display: flex;
+			align-items: center;
+			margin-bottom: 10px;
+		}
+		.logo-container img {
+			display: block;
+			width: 50px;
+			height: 50px;
+			margin-right: 10px;
+		}
+		.post-header {
+			display: flex;
+			align-items: center;
+			margin-bottom: 10px;
+		}
+		.post-header img {
+			display: block;
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			margin-right: 10px;
+		}
+		.post-header h2 {
+			font-size: 18px;
+			font-weight: bold;
+			margin: 0;
+		}
+		.post-footer {
+			display: flex;
+			align-items: center;
+			font-size: 14px;
+			color: #777777;
+			margin-top: 10px;
+		}
+		.post-footer span {
+			margin-right: 10px;
+		}
+		.post-footer img {
+			display: block;
+			width: 20px;
+			height: 20px;
+			margin-right: 5px;
+		}
+		.post-description {
+			font-size: 16px;
+			line-height: 1.5;
+			margin: 10px 0;
+		}
+		.post-image {
+			display: block;
+			margin: 0px 0;
+			max-width: 100%;
+			height: auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="post-container">
+		<div class="logo-container">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png" alt="LinkedIn Logo">
+			<h2>LinkedIn Post Example</h2>
+		</div>
+		<div class="post-header">
+			<img src="./pfp.jpg" alt="Profile picture">
+			<h2><a href="https://www.linkedin.com/in/rami-wazzi-2336201ba/">Rami EL-WAZZI</a></h2> 
+		</div>
+		<div class="post-footer">
+			<span>314159 followers</span>
+			<br>
+			
+		</div>
+		<div class="post-footer">
+		<span>2 days ago - </span>
+			<img src="./earth.png" alt="Earth logo">
+		</div>
+		<p class="post-description">
+			Hello network, I wanted to share this project that I am quite proud of. 
+			I have been working on it for the past 3 weeks, to challenge myself and improve my 
+			skills in DataScience, specifically improving my data Scientist skills. To do that 
+			I chose a dataset on Kaggle that includes data about significant earthquakes that 
+			have happened since 1st Jan 1965 and up to 31st Dec 2016. Here is the link to get 
+			the dataset : <a href="https://www.kaggle.com/usgs/earthquake-database">https://www.kaggle.com/usgs/earthquake-database</a>.
+			<br>
+			<br>
+			It contains 23K rows which isn’t all that much considering the timespan, but it is what I worked on, 
+			as the result isn’t as important to me as the challenge. With this dataframe I was going to create a 
+			visualization of earthquakes.
+			<br>
+			23K rows spread over 21 columns, including the magnitude, latitude, longitude, depth, and the type 
+			of earthquake (including nuclear explosions which are considered a type of earthquake).
+			<br>
+			<br>
+			You can see here a gif representing all earthquakes that happened every month in each frame.
+			The circles get bigger and whiter with the magnitude. The more a circle is transparent, the deeper 
+			it is (under the surface of the sea). 
+
+		</p>
+		
+		<img class="post-image" src="../gifs_final/earthquakes_cropped.gif" alt="Image description">
+		<p class="post-description">
+			<br>
+			<br>
+			Then I wanted to see if I could predict the magnitude of an earthquake based on the location, 
+			depth, and the type of earthquake. I used sklearn to train a model of Linear Regression,
+			I used the data before 2016 to train the model, and the data from 2016 to test the model.
+			Using the model I was able to create a dataset of predicted longitude, latitude, depth,
+			and magnitude. I then used this dataset to create a visualization of the predicted earthquakes.
+			 
+			<br>
+			<br>
+			You can see here a gif representing all earthquakes that happened every month in each frame.
+			The circles get bigger and whiter with the magnitude. The more a circle is transparent, the deeper 
+			it is (under the surface of the sea).
+		</p>
+
+
+		<img class="post-image" src="../gifs_final/earthquakes_pred_cropped.gif" alt="Image description">
+	</div>
+</body>
+</html>
