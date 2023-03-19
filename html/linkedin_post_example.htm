@@ -93,47 +93,69 @@
 			<img src="./earth.png" alt="Earth logo">
 		</div>
 		<p class="post-description">
-			Hello network, I wanted to share this project that I am quite proud of. 
-			I have been working on it for the past 3 weeks, to challenge myself and improve my 
-			skills in DataScience, specifically improving my data Scientist skills. To do that 
-			I chose a dataset on Kaggle that includes data about significant earthquakes that 
-			have happened since 1st Jan 1965 and up to 31st Dec 2016. Here is the link to get 
-			the dataset : <a href="https://www.kaggle.com/usgs/earthquake-database">https://www.kaggle.com/usgs/earthquake-database</a>.
-			<br>
-			<br>
-			It contains 23K rows which isn’t all that much considering the timespan, but it is what I worked on, 
-			as the result isn’t as important to me as the challenge. With this dataframe I was going to create a 
-			visualization of earthquakes.
-			<br>
-			23K rows spread over 21 columns, including the magnitude, latitude, longitude, depth, and the type 
-			of earthquake (including nuclear explosions which are considered a type of earthquake).
-			<br>
-			<br>
-			You can see here a gif representing all earthquakes that happened every month in each frame.
-			The circles get bigger and whiter with the magnitude. The more a circle is transparent, the deeper 
-			it is (under the surface of the sea). 
+Hello network, I wanted to share this project that I am quite proud of. 
+I have been working on it for the past 3 weeks, to challenge myself and improve my 
+skills in DataScience, specifically improving my data Scientist skills. To do that 
+I chose a dataset on Kaggle that includes data about significant earthquakes that 
+have happened since 1st Jan 1965 and up to 31st Dec 2016. Here is the link to get 
+the dataset : <a href="https://www.kaggle.com/usgs/earthquake-database">https://www.kaggle.com/usgs/earthquake-database</a>.
+<br>
+<br>
+It contains 23K rows which isn’t all that much considering the timespan, but it is what I worked on, 
+as the result isn’t as important to me as the challenge. With this dataframe I was going to create a 
+visualization of earthquakes.
+<br>
+23K rows spread over 21 columns, including the magnitude, latitude, longitude, depth, and the type 
+of earthquake (including nuclear explosions which are considered a type of earthquake).
+<br>
+<br>
+You can see here a gif representing all earthquakes that happened every month in each frame.
+The circles get bigger and whiter with the magnitude. The more a circle is transparent, the deeper 
+it is (under the surface of the sea). 
+
 
 		</p>
 		
 		<img class="post-image" src="../gifs_final/earthquakes_cropped.gif" alt="Image description">
 		<p class="post-description">
-			<br>
-			<br>
-			Then I wanted to see if I could predict the magnitude of an earthquake based on the location, 
-			depth, and the type of earthquake. I used sklearn to train a model of Linear Regression,
-			I used the data before 2016 to train the model, and the data from 2016 to test the model.
-			Using the model I was able to create a dataset of predicted longitude, latitude, depth,
-			and magnitude. I then used this dataset to create a visualization of the predicted earthquakes.
-			 
-			<br>
-			<br>
-			You can see here a gif representing all earthquakes that happened every month in each frame.
-			The circles get bigger and whiter with the magnitude. The more a circle is transparent, the deeper 
-			it is (under the surface of the sea).
+<br>
+<br>
+Then I wanted to see if I could predict the magnitude of an earthquake based on the location, 
+depth, and the type of earthquake. I used sklearn to train a model of Linear Regression,
+I used the data before 2016 to train the model, and the data from 2016 to test the model.
+Using the model I was able to create a dataset of predicted longitude, latitude, depth,
+and magnitude. I then used this dataset to create a visualization of the predicted earthquakes
+over the visualization of the actual earthquakes that have happened in 2016, to see if my
+model was accurate.
+<br>
+<br>
+You can see here a gif representing all earthquakes that happened every month before 1st of January 2016 in each frame.
+Then starting January 2016, the added circles (in blue and green) represent the predicted earthquakes. The legend is the
+same as the previous gif, but instead of brown -> white representing magnitudes that range from 4.5 to 9, for the predicted 
+earthquakes the colors are blue -> green.
 		</p>
-
-
 		<img class="post-image" src="../gifs_final/earthquakes_pred_cropped.gif" alt="Image description">
+		<p class="post-description">
+<br>
+<br>
+As you can see, the model is not very accurate, but it is still interesting to see the difference between the actual
+earthquakes and the predicted earthquakes, as the model, while it hasn't accurately predicted earthquakes, is still following the
+general shape of the tectonic plates. The model is not very accurate because the dataset is not very big, and
+also because the data used include 5 columns to be predicted for more than 10 columns of input. I had to cut corners
+to make the model trainable in a reasonable amount of time. I linked the code i used to create the model and the
+visualization. 
+<br> 
+I have ideas to improve the model.
+<br>
+Some of them include, crossing the data with other datasets, to get more information about the earthquakes, also 
+instead of using the data to calculate the mean Longitude, Latitude, Magnitude, and Depth, of ALL earthquakes
+that happened up to only 3 days before the predicted value. I could use the data to calculate those values
+by regions, and for a larger span of time.
+<br>
+those ideas will have to wait until I have more time to work on it. or a better computer :D.
+<br>
+Anyway I hope you enjoyed this post, thanks for your interest if you have read it,and if you have any questions or suggestions, feel free to contact me.
+		</p>
 	</div>
 </body>
 </html>
